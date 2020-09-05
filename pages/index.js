@@ -1,6 +1,21 @@
 import Head from 'next/head'
+import Search from '../components/search/Search.js'
 
 export default function Home() {
+
+  // const fetcher = async () => {
+  //   const resp = await fetch('/api/product/list?q=celular');
+  //   const data = await resp.json();
+  //   console.log(data);
+  // }
+
+
+  // const fetcherById = async () => {
+  //   const resp = await fetch('/api/product/MLA869674847');
+  //   const data = await resp.json();
+  //   console.log(data);
+  // }
+
   return (
     <div className="container">
       <Head>
@@ -9,7 +24,17 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title">
+        <Search />
+
+
+        <p>Teste</p>
+        
+        
+        
+        
+        {/* <button onClick={fetcher}>Clique</button>
+        <button onClick={fetcherById}>Clique Bucar por id</button> */}
+        {/* <h1 className="title">
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
@@ -45,7 +70,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
       <footer>
@@ -60,23 +85,43 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
+      
         .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        @media (min-width: 992px) {
+          .container {
+              width: 1066px;
+           }
         }
 
         main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-gap: 20px;
         }
+
+        // .container {
+        //   min-height: 100vh;
+        //   padding: 0 0.5rem;
+        //   display: flex;
+        //   flex-direction: column;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
+
+        // main {
+        //   padding: 5rem 0;
+        //   flex: 1;
+        //   display: flex;
+        //   flex-direction: column;
+        //   justify-content: center;
+        //   align-items: center;
+        // }
 
         footer {
           width: 100%;

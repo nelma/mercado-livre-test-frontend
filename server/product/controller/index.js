@@ -32,7 +32,7 @@ class ProductController {
 
       const resp = await ProductService.listItems(req.query.q);
       
-			res.json(resp);
+			res.json({msg: 'OK'});
 		} catch (error) {
 			GenericErrorHandler.handle(error, req.correlationId(), res);
 		}
