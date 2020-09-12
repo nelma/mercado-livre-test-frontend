@@ -1,3 +1,53 @@
-.Teste {
-  font-size: 45px
+.SearchLogo {
+
+  background-image: url('../../images/Logo_ML.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 70px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 5px;
+  width: 1036px;
+  
+  @media (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) { 
+
+      .SearchLogo{
+          background:url('../../images/Logo_ML@2x.png') no-repeat top left;
+          background-size: 200px 200px;
+      }
+  }
+
+
+  .CustomInput {
+
+    display: flex;
+    flex-direction: row;
+
+    .SearchInput {
+      border: none;
+      font-size: 18px;
+      width: 100%;
+    
+      @media (-webkit-min-device-pixel-ratio: 2), 
+      (min-resolution: 192dpi) { 
+    
+          .SearchInput{
+              background:url('../../images/ic_Search@2x.png') no-repeat top left;
+              background-size: 200px 200px;
+          }
+      }
+    }
+
+    .SearchIcon {
+      background-image: url('../../images/ic_Search.png');
+      background-repeat: no-repeat;
+      background-color: #eeeeee;
+      width: 24px;
+      height: 24px;
+      background-position: center;
+    }
+  }
+
 }
+
